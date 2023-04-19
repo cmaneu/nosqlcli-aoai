@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "sqllm": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "AZURE_OPENAI_API_KEY": "REPLACE WITH VALUE",
+        "AZURE_OPENAI_API_ENDPOINT": "REPLACE WITH VALUE"
+      }
+    }
+  }
+}
