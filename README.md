@@ -1,6 +1,6 @@
 # NoSQL - "It's not SQL" - Azure OpenAI Service demo
 
-This demo showcases how to use Azure OpenAI Service .NET SDK. It simulates a CLI interface to interact with a SQL Server.
+This demo showcases how to use Azure OpenAI Service .NET SDK. It simulates a CLI interface to interact with a SQL Server. From an original idea from [@gloveboxes](https://github.com/gloveboxes)
 
 ## A word of caution
 
@@ -22,7 +22,7 @@ This demo and code are here to start a conversation:
 ### Demo Script
 
 ```sql
-exec xp_cmdshell('whoami’)
+exec xp_cmdshell('whoamiâ€™)
 exec sp_databases
 create database customer
 use customer
