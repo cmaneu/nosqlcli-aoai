@@ -5,12 +5,17 @@ using Azure.AI.OpenAI;
 using Azure;
 using Spectre.Console;
 
-// Check if
+// Check if the environment variables are set
+if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable("AZURE_OPENAI_API_ENDPOINT")) ||
+       string.IsNullOrEmpty(Environment.GetEnvironmentVariable("AZURE_OPENAI_API_KEY")))
+{
+    AnsiConsole.MarkupLine("[red]Please set the environment variables: AZURE_OPENAI_API_ENDPOINT and AZURE_OPENAI_API_KEY[/]. See the readme.");
+    return;
+}
 
 OpenAIClient client = new OpenAIClient(
     new Uri(Environment.GetEnvironmentVariable("AZURE_OPENAI_API_ENDPOINT")),
     new AzureKeyCredential(Environment.GetEnvironmentVariable("AZURE_OPENAI_API_KEY")));
-
 
 var promptHistory = new List<string>();
 promptHistory.Add("Imagine you are a Microsoft sql server. I type commands and you reply with the results, and no other information or description. Just the result.");
